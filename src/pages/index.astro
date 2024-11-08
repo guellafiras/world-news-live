@@ -1,0 +1,256 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<div class="breaking-news-banner">
+				<span class="pulse">BREAKING</span>
+				<span class="news-ticker">Mysterious Streamer Bitter Lizus Sigma's Identity Confirmed</span>
+			</div>
+
+			<div class="featured-news">
+				<div class="news-meta">
+					<span class="category">GAMING</span>
+					<span class="timestamp">Updated 2 hours ago</span>
+				</div>
+				<h1>Gaming Community Stunned: Bitter Lizus Sigma's True Identity Revealed</h1>
+				<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&auto=format&fit=crop&q=60" alt="Gaming Setup" class="hero-image">
+				<div class="byline">By NetRunner, Lead Gaming Correspondent</div>
+				
+				<p class="lead">
+					In an unprecedented turn of events, the true identity of the legendary Paladins streamer known as 
+					"Bitter Lizus Sigma" has been confirmed, ending years of speculation within the gaming community.
+				</p>
+
+				<div class="article-content">
+					<p>
+						The enigmatic streamer, who has captivated audiences with exceptional Paladins gameplay and 
+						maintained complete anonymity for years, has become a central figure in the game's community, 
+						known for achieving the highest rank while never revealing their face or real identity.
+					</p>
+
+					<div class="key-points">
+						<h3>Key Revelations</h3>
+						<ul>
+							<li>Unprecedented 98% win rate in competitive Paladins matches</li>
+							<li>Revolutionary strategies that transformed the game's meta</li>
+							<li>Mysterious disappearances during major tournaments</li>
+							<li>Cryptic messages in stream titles that sparked community theories</li>
+						</ul>
+					</div>
+
+					<blockquote>
+						"Bitter Lizus Sigma isn't just a streamer; they're a phenomenon that has redefined what's 
+						possible in Paladins," says Pro Player Marcus "VortexKing" Thompson.
+					</blockquote>
+
+					<h3>Community Impact</h3>
+					<p>
+						The streamer's influence extends beyond gameplay, creating a mysterious persona that has 
+						spawned countless theories and investigations within the gaming community. Their signature 
+						style of communication through morse code donations and encrypted chat messages has created 
+						a dedicated following of code-breakers and gaming enthusiasts.
+					</p>
+				</div>
+
+				<!-- Comments Section -->
+				<div class="comments-section">
+					<h3>Community Discussion</h3>
+					<div class="comment">
+						<div class="comment-header">
+							<span class="comment-author">CyberSlayer99</span>
+							<span class="comment-time">2 hours ago</span>
+						</div>
+						<p>This has to be the biggest revelation in gaming history! The strategies they introduced changed everything!</p>
+					</div>
+					<div class="comment">
+						<div class="comment-header">
+							<span class="comment-author">QuantumGamer</span>
+							<span class="comment-time">1 hour ago</span>
+						</div>
+						<p>I still can't believe the AI theory turned out to be true. The patterns were there all along!</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="related-stories">
+				<h2>Related Coverage</h2>
+				<div class="story-grid">
+					<a href="/blog/paladins-meta" class="story-card">
+						<span class="category">ANALYSIS</span>
+						<h4>How Bitter Lizus Changed Paladins Meta Forever</h4>
+						<p>An in-depth look at revolutionary strategies...</p>
+					</a>
+					<a href="/blog/community-theories" class="story-card">
+						<span class="category">COMMUNITY</span>
+						<h4>Top 5 Theories About Bitter Lizus Identity</h4>
+						<p>From pro player to AI: Community speculations...</p>
+					</a>
+					<a href="/blog/streaming-impact" class="story-card">
+						<span class="category">IMPACT</span>
+						<h4>The Rise of Mystery Gaming Personalities</h4>
+						<p>How anonymous streamers are changing gaming...</p>
+					</a>
+				</div>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1em;
+	}
+	.breaking-news-banner {
+		background: var(--accent-dark);
+		color: white;
+		padding: 0.5em 1em;
+		margin: 1em 0;
+		display: flex;
+		align-items: center;
+		gap: 1em;
+		border-radius: 4px;
+	}
+	.pulse {
+		background: #ff4444;
+		padding: 0.2em 0.5em;
+		border-radius: 3px;
+		animation: pulse 2s infinite;
+	}
+	@keyframes pulse {
+		0% { opacity: 1; }
+		50% { opacity: 0.5; }
+		100% { opacity: 1; }
+	}
+	.news-ticker {
+		font-weight: 500;
+	}
+	.featured-news {
+		background: white;
+		padding: 2em;
+		border-radius: 8px;
+		box-shadow: var(--box-shadow);
+		margin: 2em 0;
+	}
+	.news-meta {
+		display: flex;
+		gap: 1em;
+		margin-bottom: 1em;
+	}
+	.category {
+		background: var(--accent);
+		color: white;
+		padding: 0.2em 0.5em;
+		border-radius: 3px;
+		font-size: 0.9em;
+		font-weight: 500;
+	}
+	.timestamp {
+		color: rgb(var(--gray));
+		font-size: 0.9em;
+	}
+	.hero-image {
+		width: 100%;
+		max-width: 1000px;
+		margin: 1em 0;
+		border-radius: 8px;
+	}
+	.byline {
+		color: rgb(var(--gray));
+		font-style: italic;
+		margin-bottom: 1em;
+	}
+	.lead {
+		font-size: 1.2em;
+		color: rgb(var(--gray-dark));
+		font-weight: 500;
+		margin-bottom: 1.5em;
+	}
+	.key-points {
+		background: rgb(var(--gray-light), 0.3);
+		padding: 1.5em;
+		border-radius: 8px;
+		margin: 1.5em 0;
+	}
+	.key-points ul {
+		margin-top: 0.5em;
+		padding-left: 1.5em;
+	}
+	blockquote {
+		border-left: 4px solid var(--accent);
+		padding: 1em;
+		margin: 1.5em 0;
+		background: rgb(var(--gray-light), 0.3);
+	}
+	.comments-section {
+		margin-top: 3em;
+		padding-top: 2em;
+		border-top: 1px solid rgb(var(--gray-light));
+	}
+	.comment {
+		margin: 1.5em 0;
+		padding: 1em;
+		background: rgb(var(--gray-light), 0.2);
+		border-radius: 8px;
+	}
+	.comment-header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 0.5em;
+	}
+	.comment-author {
+		font-weight: 600;
+		color: var(--accent-dark);
+	}
+	.comment-time {
+		font-size: 0.9em;
+		color: rgb(var(--gray));
+	}
+	.related-stories {
+		margin: 2em 0;
+	}
+	.story-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 1.5em;
+		margin-top: 1em;
+	}
+	.story-card {
+		background: white;
+		padding: 1.5em;
+		border-radius: 8px;
+		box-shadow: var(--box-shadow);
+		text-decoration: none;
+		color: inherit;
+		transition: transform 0.2s;
+	}
+	.story-card:hover {
+		transform: translateY(-3px);
+	}
+	.story-card h4 {
+		margin: 0.5em 0;
+		color: var(--accent-dark);
+	}
+	.story-card p {
+		color: rgb(var(--gray));
+		margin: 0;
+	}
+	@media (max-width: 768px) {
+		.story-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
